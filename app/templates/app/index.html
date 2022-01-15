@@ -1,0 +1,21 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Joe's Blog</h1>
+    <p class="lead">A blog webpage made using Django and PostreSQL.</p>
+    <p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    {% for article in articles %}
+    <div class="col-md-4">
+        <h2> {{ article.title }} </h2>
+        <p> {{ article.body }} </p>
+        <p><a class="btn btn-default" href="">Learn more &raquo;</a></p>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
