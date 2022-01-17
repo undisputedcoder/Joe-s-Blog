@@ -59,6 +59,7 @@
     <Folder Include="books\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="libman.json" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />

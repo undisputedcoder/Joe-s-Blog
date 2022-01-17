@@ -2,9 +2,26 @@
 
 {% block content %}
 
-{% for article in articles %}
-<h2>{{ article.title }}.</h2>
-<h3>{{ article.body }}</h3>
-{% endfor %}
+<h2>Posts</h2>
+
+<div class="list-group">
+    {% for article in articles %}
+    <div class="row" style="padding:10px">
+        <div class="col-4">
+            <img src="{{ article.image }}" style="width:300px;height:auto;" alt="card cap"/>
+        </div>
+        <div class="col-8">            
+            <a href="#" class="list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+                <h2 class="mb-1">{{ article.title }}.</h2>
+                <small>3 days ago</small>
+            </div>
+            <p class="mb-1">{{ article.body }}</p>
+            <small>by {{ article.author }}</small>
+            </a>            
+        </div>
+    </div>  
+    {% endfor %}
+</div>
 
 {% endblock %}

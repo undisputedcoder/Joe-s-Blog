@@ -8,13 +8,15 @@
     <p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
 </div>
 
-<div class="row">
+<div class="card-deck">
     {% for article in articles %}
-    <div class="col-md-4">
-        <h2> {{ article.title }} </h2>
-        <p> {{ article.body }} </p>
-        <p><a class="btn btn-default" href="">Learn more &raquo;</a></p>
-    </div>
+    <div class="card">
+        <img class="card"-img-top src="{{ article.image }}" style="height:auto;width:300px" alt="Card image cap" />        
+        <div class="card-body">
+            <h5 class="card-title">{{ article.title }}</h5>
+            <p class="card-text">{{ article.body }}</p>
+        </div>        
+    </div>    
     {% endfor %}
 </div>
 
